@@ -4,17 +4,6 @@ from restaurant.serializers import MenuSerializer
 from rest_framework.test import APIClient
 from django.contrib.auth.models import User
 
-# class MenuViewTest(TestCase):
-#     def test_getall(self):
-#         items = setup(self)
-
-#         response = self.client.get('/restaurant/menu/')
-#         self.assertEquals(response.status_code, 200)
-#         self.assertQuerysetEqual(
-#             response.data,
-#             items.data
-#         )
-
 class MenuViewTest(TestCase):   
     def setup(self):
         item1 = Menu.objects.create(title="Peanuts", price=1.99, inventory=2)
